@@ -1,7 +1,0 @@
-venv/
-.venv/
-.env
-__pycache__/
-*.pyc
-week_4/.venv/
-week_4/venv/
