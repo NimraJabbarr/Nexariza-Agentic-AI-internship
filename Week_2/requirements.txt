@@ -1,0 +1,9 @@
+streamlit==1.38.0
+langchain==0.2.14
+langchain-core==0.2.33
+langchain-community==0.2.12
+langchain-openai==0.1.20
+tavily-python==0.3.3
+pydantic==2.8.2
+python-dotenv==1.0.1
+requests==2.31.0

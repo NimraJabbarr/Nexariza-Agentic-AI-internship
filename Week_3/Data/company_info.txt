@@ -1,0 +1,59 @@
+=== COMPANY OVERVIEW ===
+Nexariza AI is an artificial intelligence consulting and engineering company, founded in 2024 by Ahmad Yasin. Headquartered in Lahore, Pakistan, Nexariza AI operates as a global remote-first team serving clients in 15+ countries. The company maintains a 98% client satisfaction rate with an average rating of 5.0/5 based on published reviews.
+
+Nexariza AI serves clients across various industries including healthcare, retail, travel, agriculture, automotive, and finance, delivering AI solutions tailored to each industry's specific needs.
+
+=== SERVICES ===
+Nexariza AI offers the following core services:
+1. AI Agents - custom autonomous AI agents for business automation
+2. Machine Learning - predictive models and ML-driven solutions
+3. Computer Vision - image and video analysis systems
+4. Web Development - modern web applications built with React/Next.js
+5. Automation Systems - workflow and process automation
+6. Data Analytics - data-driven insights and reporting
+7. SaaS Development - full-cycle SaaS product development
+8. API Integrations - connecting third-party services and systems
+
+Pricing is not fixed or published; each project is custom-quoted based on scope and requirements. Clients can schedule a discovery call or email contact@nexariza.com for a quote.
+
+=== CONTACT INFORMATION ===
+General inquiries: contact@nexariza.com
+Founder & CEO direct: ahmad.yasin@nexariza.com
+COO direct: eman.sarfraz@nexariza.com
+AI/ML team: abdul.rehman@nexariza.com, ahmad.ibrahim@nexariza.com
+AI/ML + App Development: hassan.nadeem@nexariza.com
+
+WhatsApp: +92 370 7348001 (described as "Instant Signal" — for quick contact and instant responses)
+
+Location: Lahore, Pakistan (headquarters). Nexariza AI is a global remote team serving clients in 15+ countries.
+
+Response time: Nexariza AI aims to respond within 24 hours to inquiries submitted through the contact form.
+
+AI Consultant: Nexariza AI also offers a 24/7 available AI Advisor / AI Consultant tool on their website for instant answers, accessible at nexariza.com/ai-consultant.
+
+=== HOW TO GET STARTED ===
+Prospective clients can start a project or request a custom quote by:
+1. Scheduling a discovery call via the Contact page (nexariza.com/contact)
+2. Emailing contact@nexariza.com directly for a custom quote
+3. Using the WhatsApp number for instant contact
+4. Trying the AI Consultant tool for immediate answers to common questions
+
+=== CAREERS / INTERNSHIPS ===
+Nexariza AI offers paid internships in AI/ML, Data Science, and Full Stack Development. Job openings and internship opportunities are listed at nexariza.com/jobs.
+Internship Duration: Nexariza's internship programs typically last for 8 to 12 weeks with flexible remote schedules.
+
+=== INTERNSHIP REQUIREMENTS & ELIGIBILITY ===
+Nexariza AI offers competitive internship programs for students and early-career enthusiasts. Below are the standard requirements for applying:
+
+1. Technical Skills & Domains:
+- AI/ML Interns: Basic understanding of Python, machine learning concepts, libraries (Scikit-learn, TensorFlow), and foundational knowledge of RAG or LLMs.
+- Data Science Interns: Proficiency in Python, data preprocessing, feature engineering, Exploratory Data Analysis (EDA), and data visualization.
+- Full Stack Development Interns: Familiarity with modern web development frameworks (such as React, Next.js, or Django), version control (Git/GitHub), and basic API integration.
+
+2. General Criteria:
+- Educational Background: Current students or recent graduates pursuing a Bachelor's or Master's degree in Software Engineering, Computer Science, Data Science, or related fields.
+- Commitment & Schedule: Ability to commit to the 8 to 12 weeks program duration with a flexible remote schedule.
+- Passion & Problem Solving: Strong analytical mindset, eagerness to learn production-grade AI systems, and ability to collaborate in a remote team environment.
+
+3. How to Apply for Internships:
+Candidates can check active openings and submit their applications directly through nexariza.com/jobs or reach out via email for queries.
