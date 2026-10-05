@@ -1,57 +1,51 @@
-# The Nexariza Research Desk
+# Week 4 — The Nexariza Research Desk
 
-A 4-agent CrewAI pipeline (Researcher → Analyst → Writer → Publisher) with a
-newsroom-themed Streamlit UI.
+> A **4-agent CrewAI pipeline** (Researcher → Analyst → Writer → Publisher) wrapped in a **newsroom-themed Streamlit UI**. Give it a topic, and a virtual newsroom researches it, analyzes it, writes it up, and publishes a finished edition.
 
-## Setup
-```bash
-python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-cp .env.example .env            # then paste your free Groq + Tavily keys into .env
-```
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Newsroom%20UI-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![CrewAI](https://img.shields.io/badge/CrewAI-Multi--Agent-000000)](https://www.crewai.com/)
+[![Groq](https://img.shields.io/badge/Groq-LLM-orange)](https://groq.com/)
+[![Tavily](https://img.shields.io/badge/Tavily-Web%20Search-blueviolet)](https://tavily.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## Run
-```bash
-# terminal test (no UI)
-python crew.py "Latest AI Agent Frameworks 2025"
+---
 
-# full UI
-streamlit run app.py
-```
+## 📸 Screenshot
 
-## Why this stack (vs. the Gemini/DeepSeek versions you compared)
-- **CrewAI over LangGraph**: this is a strict linear chain, no branching/loops —
-  CrewAI's role+goal+backstory model fits with less boilerplate than LangGraph's
-  state-graph, which earns its complexity when you *do* need conditional paths.
-- **Groq + built-in `TavilySearchTool`** over GPT-4o + hand-rolled Tavily calls:
-  free-tier friendly, and the built-in tool handles retries/formatting so there's
-  less custom code to maintain.
-- **`crewai==1.15.x` (current)**, not the `0.28.8` pin — the old pin would likely
-  fail to install cleanly or run with a very different (older) API surface.
-- **`Crew.kickoff()`** drives the whole run instead of manually calling
-  `agent.execute_task()` per agent — kickoff() is what actually manages
-  CrewAI's built-in context-passing between tasks.
+![The Nexariza Research Desk](screenshot.png)
 
-## Known dependency gotcha (already fixed here)
-`crewai_tools.TavilySearchTool` needs the separate `tavily-python` package
-installed, or it will interactively prompt to install it (which hangs in
-non-interactive environments). It's pinned in `requirements.txt`.
+---
 
-## File structure
-```
-nexariza_research_engine/
-├── agents/
-│   ├── __init__.py      # shared Groq LLM + Tavily tool + key validation
-│   ├── researcher.py    # build_researcher()
-│   ├── analyst.py       # build_analyst()
-│   ├── writer.py        # build_writer()
-│   └── publisher.py     # build_publisher()
-├── tasks.py              # 4 tasks, context-chained, output_file per stage
-├── crew.py                # Crew assembly + run_pipeline() with retry + callback
-├── utils.py                # retry_on_failure decorator, split_editions helper
-├── app.py                   # Streamlit "Research Desk" UI
-├── requirements.txt
-├── .env.example
-└── .gitignore
-```
+## 🎯 What It Is
+
+The **Nexariza Research Desk** is a **multi-agent AI system** built on CrewAI. It simulates a real newsroom:
+
+| Role | Responsibility |
+|---|---|
+| 🔍 **Researcher** | Searches the web (Tavily) for the latest, most relevant info on the topic |
+| 🧠 **Analyst** | Reads the research, extracts the signal, and identifies key themes/insights |
+| ✍️ **Writer** | Turns the analysis into a structured, readable article/edition |
+| 📤 **Publisher** | Polishes, formats, and packages the final output for delivery |
+
+Each agent has a **role + goal + backstory**, and the output of each stage is passed cleanly to the next via CrewAI's built-in context chaining.
+
+---
+
+## ✨ Features
+
+- 🤖 **4 specialized agents** working as a pipeline: Researcher → Analyst → Writer → Publisher
+- 🌐 **Live web search** via Tavily — no stale data, no hallucinated facts
+- ⚡ **Groq-powered inference** — fast and free-tier friendly
+- 📰 **Newsroom-themed Streamlit UI** — feels like a real editorial workspace
+- 🔗 **Context-chained tasks** — each agent gets the previous stage's output
+- 💾 **Per-stage output files** — every stage saves its own artifact for review
+- 🔁 **Retry handling** — `retry_on_failure` decorator keeps a run from dying on a transient error
+- 📚 **Multi-edition support** — `split_editions` helper separates different topics/editions cleanly
+- 🖥️ **CLI + UI** — run it from the terminal or the full dashboard
+
+---
+
+## 🧠 How It Works
+
+The pipeline is a **strict linear chain** — no branching, no loops:
